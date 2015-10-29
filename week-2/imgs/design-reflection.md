@@ -1,7 +1,7 @@
 # 2.3 Introduction to Design and Site Planning
 
 ## My Site Map
-![Alt text](/sitemag.jpg "My Site Map")
+![Alt text](sitemag.jpg "My Site Map")
 
 ## Site Map and Reflection
 <ol>
