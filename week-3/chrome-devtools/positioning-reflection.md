@@ -1,3 +1,32 @@
+#1:
+![Alt Text](imgs/1.png)
+
+#2:
+![Alt Text](imgs/2.png)
+
+#3:
+![Alt Text](imgs/3.png)
+
+#4:
+![Alt Text](imgs/4.png)
+
+#5:
+![Alt Text](imgs/5.png)
+
+#6:
+![Alt Text](imgs/6.png)
+
+#7:
+![Alt Text](imgs/7.png)
+
+#8:
+![Alt Text](imgs/8.png)
+
+#9: 
+![Alt Text](imgs/9.png)
+
+
+
 #How can you use Chrome's DevTools inspector to help you format or position elements?
 
 You see instantly how certain changes or elements affect the page without needing to open up a lot of files and save and reopen anything.

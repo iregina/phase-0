@@ -1,29 +1,29 @@
 #1:
-![Alt Text](img/1.png)
+![Alt Text](imgs/1.png)
 
 #2:
-![Alt Text](img/2.png)
+![Alt Text](imgs/2.png)
 
 #3:
-![Alt Text](img/3.png)
+![Alt Text](imgs/3.png)
 
 #4:
-![Alt Text](img/4.png)
+![Alt Text](imgs/4.png)
 
 #5:
-![Alt Text](img/5.png)
+![Alt Text](imgs/5.png)
 
 #6:
-![Alt Text](img/6.png)
+![Alt Text](imgs/6.png)
 
 #7:
-![Alt Text](img/7.png)
+![Alt Text](imgs/7.png)
 
 #8:
-![Alt Text](img/8.png)
+![Alt Text](imgs/8.png)
 
 #9: 
-![Alt Text](img/9.png)
+![Alt Text](imgs/9.png)
 
 
 
