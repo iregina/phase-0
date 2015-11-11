@@ -13,5 +13,5 @@ def good_guess?(n)
 	end
 end
 
-good_guess?(42)
-good_guess?(40)
+puts good_guess?(42)
+puts good_guess?(40)
