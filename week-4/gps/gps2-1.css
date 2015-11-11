@@ -1,0 +1,23 @@
+ {
+	padding-left: 30px;
+}
+
+header {
+	width: 100%;
+}
+
+footer {
+	width: 100%;
+	clear: both;
+	padding-top: 50px;
+}
+
+.column-1 {
+	float: left;
+	width: 50%;
+}
+
+.column-2 {
+	float: right;
+	width: 50%;
+}
