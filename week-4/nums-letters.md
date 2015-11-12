@@ -59,28 +59,30 @@ puts 60 * 24 * 365 * 10
 [https://github.com/iregina/phase-0/blob/master/week-4/simple-string/simplestring.rb](https://github.com/iregina/phase-0/blob/master/week-4/simple-string/simplestring.rb)  
 
 **4.2.3 Local Variable and Basic Arithmetical Expressions
- 
-
+[https://github.com/iregina/phase-0/blob/master/week-4/basic-math/basic-math.rb](https://github.com/iregina/phase-0/blob/master/week-4/basic-math/basic-math.rb) 
 
 
 ##Reflect
-**1. How does Ruby handle addition, subtraction, multiplication, and division of numbers?**  
+**1. How does Ruby handle addition, subtraction, multiplication, and division of numbers?** 
 
-My answer
+Ruby handles addition, subtraction, multiple, and division as methods -- which means that it apply these operators to not just numbers, but strings as well -- although that gets a little more complicated. However, with Ruby, you just have to be careful about what you apply these method to. For example, you have to clear about applying this methods to numbers, not strings. Strings can sometimes work for these operations. 
   
 **2. What is the difference between integers and floats?**  
 
-My answer  
+Integers do not have a decimal and are not fractions, they are whole numbers. Floats always have a decimal place and can have unlimited number of digits before and after the decimal place. 
   
 **3. What is the difference between integer and float division?**  
 
-My answer  
+As I wrote above, with integer division, the result will always be an integer. Even if the number isn't properly divided, this operations will round down the number to the nearest integer.With float division, you get can get fractions or exact numbers. 
   
 **4. What are strings? Why and when would you use them?**  
 
-My answer  
+Strings are essentially words, not numbers. You use them to return words, sentences, or symbols. 
   
 **5. What are local variables? Why and when would you use them?**  
-My answer   
+
+Local variable are variables that are valid only within the local area of a Ruby source code. They exist only within a method, and when they are referred outside the method, they might come back as an Error. 
   
 **6. How was this challenge? Did you get a good review of some of the basics?** 
+
+I had the toughest time understanding exactly what a local method was -- I was thinking far too complicated when I should have been applying the principle of Occam's Razor. 
