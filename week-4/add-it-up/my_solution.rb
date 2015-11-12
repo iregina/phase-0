@@ -22,11 +22,11 @@
 
 
 
-def total(a)
-	x = a.length
+def total(array)
+	x = array.length
 	sum = 0
 		while x > 0
-			sum += a[x-1]
+			sum += array[x-1]
 			x -= 1
 		end
 
@@ -34,7 +34,6 @@ def total(a)
 
 end
 
-puts "the sum is:"
 puts total([2,3,4])
 
 
@@ -43,10 +42,28 @@ puts total([2,3,4])
 # Input:
 # Output:
 # Steps to solve the problem.
-
-
+=begin
+#Same before but make sure we add space between 
+#all the strings
+#at the very end add period
+=end
 # 5. sentence_maker initial solution
 
 
 
 # 6. sentence_maker refactored solution
+
+def sentence_maker(array)
+	x = 0
+	sum = ""
+
+		while x < (array.length - 1)
+			sum += array[x].concat " " 
+			x += 1
+		end 
+			sum += array[x].concat "." 
+	return sum
+
+end
+
+puts sentence_maker(["i", "want", "to", "go"])

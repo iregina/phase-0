@@ -1,10 +1,9 @@
 #Solution Below
 
-first_name = Reg
+first_name = "regina"
+last_name = "wong"
+age = 24 
 
-last_name = Wong
-
-age = 24
 
 
 
