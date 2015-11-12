@@ -51,10 +51,15 @@ puts 60 * 24 * 365 * 10
 
 ##Assignments
 
-**4.2.1 Defining Variables**
+**4.2.1 Defining Variables**  
+
 [https://github.com/iregina/phase-0/blob/master/week-4/defining-variables/defining-variables.rb](https://github.com/iregina/phase-0/blob/master/week-4/defining-variables/defining-variables.rb)
 
-**4.2.2 Simple String Method
+**4.2.2 Simple String Method  
+[https://github.com/iregina/phase-0/blob/master/week-4/simple-string/simplestring.rb](https://github.com/iregina/phase-0/blob/master/week-4/simple-string/simplestring.rb)  
+
+**4.2.3 Local Variable and Basic Arithmetical Expressions
+ 
 
 
 
