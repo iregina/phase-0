@@ -7,8 +7,8 @@
 # I worked on this challenge [with Reuben].
 # make sure all pseudocode is commented out!
 
-# Input:
-# Output:
+# Input: Array
+# Output: Number
 # Steps to solve the problem.
 
 
