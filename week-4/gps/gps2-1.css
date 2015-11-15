@@ -1,23 +1,25 @@
- {
-	padding-left: 30px;
-}
 
 header {
-	width: 100%;
+	width: 90%;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 
 footer {
 	width: 100%;
 	clear: both;
 	padding-top: 50px;
+	text-align: center;
 }
 
 .column-1 {
 	float: left;
-	width: 50%;
+	width: 45%;
+	padding-left: 2%;
 }
 
 .column-2 {
 	float: right;
-	width: 50%;
+	width: 45%;
+	padding-left: 5%;
 }
