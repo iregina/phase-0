@@ -94,3 +94,31 @@ end
 print_list(our_hash)
 
 #print_list(create_list("carrots apples cereal pizza"))
+
+
+=begin 
+REFLECTION: 
+What did you learn about pseudocode from working on this challenge?
+I learned that it's important not to get to caught on the specific methods.
+
+What are the tradeoffs of using Arrays and Hashes for this challenge?
+Hashes allow you to assign a quantity to an item. Arrays would make this challenge
+extremely complicated because we have to assume that the number after the grocery item is the
+quantity.
+
+What does a method return?
+A method return a specific result or modifies the argument. 
+
+What kind of things can you pass into methods as arguments?
+You can pass almost anything numbers strings 
+
+How can you pass information between methods?
+you have to store local variables 
+
+What concepts were solidified in this challenge, and what concepts are still confusing?
+I'm getting the hang of creating a method, but still trying to wrap my head
+around working with local variables across various methods
+
+=end
+
+
