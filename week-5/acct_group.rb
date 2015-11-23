@@ -33,3 +33,23 @@ end
 =end
 ​
 #method takes an array of strings
+
+=begin 
+What was the most interesting and most difficult part of this challenge?
+The most difficult part was the challnege Luis asked me to try solve. He wants me
+to figure out how to write a method that can eliminate groups of 3. I'm still
+trying to figure that out.
+
+Do you feel you are improving in your ability to write pseudocode and break the problem down?
+Absolutely. I feel much more confident about what to do when I first write pseudocode.
+
+Was your approach for automating this task a good solution? What could have made it even better?
+I just practice good ruby doc habits. I wish I had more time to work ont his assignemnt. 
+
+What data structure did you decide to store the accountability groups in and why?
+I didn's store the group into a data strucutre. Ijust plugged them right into the method.
+
+What did you learn in the process of refactoring your initial solution? Did you learn any new Ruby methods?
+Sure did! I learned the each.slice method.
+
+=end
