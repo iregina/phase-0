@@ -57,6 +57,34 @@ def pad!(array, min_size, value = nil) #destructive
 end
 
 
+
+
+
+
+#refactored solution 
+
+
+
+
+
+
+
+
+
+def pad!(array, min_size, value = nil) #destructive
+ # Your code here
+ if min_size <= array.size
+     array
+ else
+     while array.size < min_size
+         array.push(value)
+         array.size += 1
+     end
+ end
+    array
+end
+
+
 # 3. Refactored Solution
 def pad(array, min_size, value = nil) #non-destructive
  # Your code here
@@ -75,3 +103,14 @@ def pad(array, min_size, value = nil) #non-destructive
      array = new_array
  end
 end
+
+
+
+# new refactored solution 
+
+
+def pad(array, min_size, value = nil)
+    new_array = array.dup
+    new_array <<value while new_array.length < min_size
+    new_array
+end 
