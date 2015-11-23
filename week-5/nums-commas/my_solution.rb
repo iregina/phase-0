@@ -67,13 +67,15 @@ It was really helpful because it gave me time to build a road map and think of i
 
 What new Ruby method(s) did you use when refactoring your solution? Describe your experience of using the Ruby documentation to implement it/them (any difficulties, etc.). Did it/they significantly change the way your code works? If so, how?
 
-TBD 
+I learned .insert 
+
 How did you initially iterate through the data structure?
 I originally was trying to iterate it every 4 then 3 and realized because objects can only be inserted one at a time, it didn't work necessarily. 
 
 Do you feel your refactored solution is more readable than your initial solution? Why?
-TBD
 
+Yes way more readble, super short and simple. I'm not sure if this method accounts
+for everything though.
 
 
 =end
