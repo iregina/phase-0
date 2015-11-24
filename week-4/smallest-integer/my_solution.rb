@@ -132,6 +132,12 @@ array = (-100..-10).to_a.shuffle
 
 puts smallest_integer(array)
 
+
+#sort
+#array[0]
+
+list_of_num.min
+
 =begin
 def smallest_integer(list_of_nums)
 
