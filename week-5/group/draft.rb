@@ -2,20 +2,23 @@ i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2 ]
 my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
 def my_hash_sorting_method(source)
+	x = source
 	older_than_4 = []
 	younger_than_4 = []
-	source.sort_by {|key, value| 
+	x.sort_by {|key, value| 
 		if value >= 5
-			older_than_4 << value
+			older_than_4 << [key, value]
 		else 
-			younger_than_4 << value
+			younger_than_4 << [key, value]
 		end
 	}
 	new_source = []
   new_source << older_than_4
   new_source << younger_than_4
+  return new_source
 end
 
+p my_family_pets_ages
 p my_hash_sorting_method(my_family_pets_ages)
 
 =begin 

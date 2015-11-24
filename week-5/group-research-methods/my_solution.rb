@@ -86,7 +86,8 @@ end
 def my_array_splitting_method(source)
   words = []
   numbers = [] 
-  source.each do |x| 
+  source2 = source
+  source2.each do |x| 
     if x.is_a? String
       words << x
     else 
@@ -100,20 +101,28 @@ def my_array_splitting_method(source)
   return new_source
 end
 
-def my_hash_sorting_method(source)
+def my_hash_splitting_method(source, number)
+  x = source
   older_than_4 = []
   younger_than_4 = []
-  source.sort_by {|key, value| 
-    if value >= 5
-      older_than_4 << value
+
+  x.sort_by {|key, value| 
+    if value > number
+      older_than_4 << [key, value]
     else 
-      younger_than_4 << value
+      younger_than_4 << [key, value]
     end
   }
+
   new_source = []
-  new_source << older_than_4
   new_source << younger_than_4
+  new_source << older_than_4
+  return new_source
+
 end
+
+p my_family_pets_ages
+p my_hash_splitting_method(my_family_pets_ages,3)
 
 # Identify and describe the Ruby method(s) you implemented.
 # .sort_by
@@ -123,15 +132,9 @@ end
 
 # Release 1: Identify and describe the Ruby method you implemented. Teach your
 # accountability group how to use the methods.
-#
-#
-#
 
 
 # Release 3: Reflect!
 # What did you learn about researching and explaining your research to others?
 # It's pretty exciting and easy to explain once you have one of the model to work with
 # because some of the methods used in one challenge could be reused in another.
-#
-#
-#
