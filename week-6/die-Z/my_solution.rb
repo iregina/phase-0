@@ -42,15 +42,24 @@ class Die
   end
 end
 
-my_Die = Die.new(["3"])
-another_die = Die.new(["1", "2"])
-p another_die.sides
-p my_Die.sides
-
-
 
 # Refactored Solution
 
+class Die
+  def initialize(labels)
+    @labels = labels
+    @sides = labels.length
+    raise "Enter in an array" unless @sides > 0 
+  end
+
+  def sides
+    @sides 
+  end
+
+  def roll
+    @labels.sample
+  end
+end
 
 
 
@@ -63,8 +72,18 @@ p my_Die.sides
 =begin
 	
 What were the main differences between this die class and the last one you created in terms of implementation? Did you need to change much logic to get this to work?
+This die class and the last one I created is that this die class can accept arrays as inputs, not integers. 
+The logic is about the same, we just had to use methods that account for using arrays. 
+
 What does this exercise teach you about making code that is easily changeable or modifiable? 
+This exercise teaches me that as long as you are clear with your instance variables,
+you can make all the changes your heart desires. 
+
 What new methods did you learn when working on this challenge, if any?
+I learned the new method called .sample. 
+
 What concepts about classes were you able to solidify in this challenge?
-	
+I understand now that classes are a way to set up new methods. Classes are a great organized
+way to create methods within a program to your own liking. 
+
 =end
