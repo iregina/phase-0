@@ -37,20 +37,35 @@ nested_data = {array: ["array", {hash: "finished"}]}
 # ============================================================
 
 # RELEASE 3: ITERATE OVER NESTED STRUCTURES
-
+=begin
 number_array = [5, [10, 15], [20,25,30], 35]
 
 p number_array = number_array.flatten!.map {
 	|number| number += 5
 }
-
+=end
 #not destructive
 
 # Bonus:
 
 startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
 
-p startup_names.map{ |x| x.map {|x| x.each { |x| x + "ly"} } }
+p startup_names.each { |element| 
+
+if element.is_a?(Array)
+	element.each { |inner_element| 
+		if inner_element.is_a?(Array)
+			inner_element.each{ |third_layer_element| third_layer_element << "ly"}	
+		else
+			inner_element << "ly"
+		end
+	}
+else
+	element << "ly"
+end
+
+}
+
 #Comment
 =begin
 What are some general rules you can apply to nested arrays?
