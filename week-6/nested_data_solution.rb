@@ -49,3 +49,14 @@ p number_array = number_array.flatten!.map {
 # Bonus:
 
 startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
+
+p startup_names.map{ |x| x.map {|x| x.each { |x| x + "ly"} } }
+#Comment
+=begin
+What are some general rules you can apply to nested arrays?
+Some general rules are that the type of methods you apply must be based on the value of the latest bracket. For example for house['kitchen']['fridge'], you should refer to 'fridge' to find out what type of methods to use (string, arrays, hashes, etc.)
+What are some ways you can iterate over nested arrays?
+You can use the .each method 
+Did you find any good new methods to implement or did you re-use one you were already familiar with? What was it and why did you decide that was a good option?
+I just used the ones I found.
+=end
