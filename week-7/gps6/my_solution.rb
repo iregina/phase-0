@@ -166,7 +166,26 @@ end
 report(STATE_DATA)
 
 #=======================================================================
-# Reflection Section
+# Reflection Section - Release 9
+=begin
+What are the differences between the two different hash syntaxes shown in the state_data file?
+The first hash syntax is using an => symbol and the other syntax is a shorter version. They both mean the same thing.
+
+What does require_relative do? How is it different from require?
+require_relative allows the program to reach for a file in the same folder without having to type out the 
+entire location address
+
+What are some ways to iterate through a hash?
+you can use each method 
+
+When refactoring virus_effects, what stood out to you about the variables, if anything?
+instance variables are a great way to refactor my program.
+
+What concept did you most solidify in this challenge?
+instance variables
+
+=end
+
 
 
 #population density is number of people per square mile as of 2012
