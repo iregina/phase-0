@@ -54,7 +54,14 @@ separateComma(100100100)
 // Reflection
 /*
 What was it like to approach the problem from the perspective of JavaScript? Did you approach the problem differently?
+It was challenging yet interesting. We approached the problem quite similarily in terms of pseudocode. 
+
 What did you learn about iterating over arrays in JavaScript?
+With iterating over arrays, the syntax is arranged differently.
+
 What was different about solving this problem in JavaScript?
+Javascript seems more condense.
+
 What built-in methods did you find to incorporate in your refactored solution?
+None so far because we felt our original solution was quite refactored.
 */
