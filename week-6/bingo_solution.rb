@@ -31,37 +31,89 @@
 
 # Initial Solution
 
-class BingoBoard
+
+board = [[33, 34, 1, 22, 7],
+        [6, 69, 75, 65, 73],
+        [5, 85, 97, 89, 57],
+        [3, 31, 96, 68, 51],
+        [2, 33, 33, 33, 33]]
+
+class Bingo
 
   def initialize(board)
-    @bingo_board = board
-    p board
-  end
-
-  def call
-    @letter = ["B", "I", "N", "G", "O"]
+    @game_piece = board
+    @letter = ["B","I","N","G","O"]
     @number = (1..100).to_a
-    @selected_letter = @letter.sample
-    @selected_number = @number.sample
-    @selected_call = "#{@selected_letter}#{@selected_number}"
   end
-
-  def check
-    @letter_index = @letter.index(@selected_letter)
-    p @letter_index
-
-    @bingo_board.each { |element| 
-      if element[@letter_index].each == @selected_number
-        element[@letter_index].replace["X"]
-        p "You got one!"
-        
-      end
-
-    }
+  
+  #@@numbers_drawn = []
+  
+  def lottery_draw
+    @random_number = []
+    @number_drawn = @number.sample
+    
+    @letter_drawn = @letter.sample
+    @random_number << @letter_drawn
+    @random_number << @number_drawn
+    @numberletter = @random_number.join
+  end
+  
+  #&& inner_index == @letter.index[@letter_drawn]
+  
+  def check_number
+    @game_piece.each_with_index do |row, index|
+      row.each_with_index do |inner_element, inner_index| 
+        if inner_element == @number_drawn && inner_index ==           @letter.index(@letter_drawn)
+          @game_piece[index][inner_index] = "X"
+        end
+        end
+        end
+  end
+  
+  # def add_number_to_bank
+   # @@numbers_drawn << @numberletter
+ # end
+  
+  def run_the_game
+  until self.winner_row == true || self.winner_column == true
+      self.lottery_draw
+    #if @@numbers_drawn.include? @numberletter
+      self.check_number
+    #end
+  end
+    p "Bingo"
+  end
+  
+  def winner_row
+    @game_piece[1].uniq.size == 1 || @game_piece[2].uniq.size == 1 || @game_piece[3].uniq.size == 1 || @game_piece[4].uniq.size == 1 || @game_piece[0].uniq.size == 1
+  end
+  
+  def winner_column   
+  index = @letter.length - 1
+  until index == 0
+  if @game_piece[0][index] == @game_piece[1][index] && @game_piece[2][index] == @game_piece[3][index] && @game_piece[4][index] == @game_piece[0][index]
+    true 
+  else 
+    index = index - 1
+  end
+  end
+  end
+  
+  def number_of_draws
+    @@instances
   end
 
 end
 
+new_game = Bingo.new(board)
+#new_game.lottery_draw
+#new_game.check_number
+new_game.run_the_game
+p board[0]
+p board[1]
+p board[2]
+p board[3]
+p board[4]
 # Refactored Solution
 
 
