@@ -40,7 +40,21 @@ function separateComma(number){
 
 // Refactored Solution
 
+function separateComma(number){
 
+  var array = number.toString().split("");
+
+  
+  if ( array.length >=4 ) {
+    for(var x = array.length-4; x >= 0; x-=3) {
+      array[x] = array[x] + ','
+    }
+    return array.join("");
+  }
+  else{
+    return number;
+  }
+}
 
 
 // Your Own Tests (OPTIONAL)
