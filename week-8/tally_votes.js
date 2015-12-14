@@ -1,9 +1,7 @@
 // Tally Votes in JavaScript Pairing Challenge.
 
-// I worked on this challenge with: Chris, Luis, Reuben 
+// I worked on this challenge with:
 // This challenge took me [#] hours.
-
-We want to go into each property of votes and add "bob" to vote count for president 
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -43,8 +41,6 @@ var voteCount = {
   treasurer: {}
 }
 
-
-
 /* The name of each student receiving a vote for an office should become a property
 of the respective office in voteCount.  After Alex's votes have been tallied,
 voteCount would be ...
@@ -68,20 +64,40 @@ var officers = {
 
 // Pseudocode
 
-Bob += 1 = 0; 
-president = [Bob, Bob, Bob,]
 
 // __________________________________________
 // Initial Solution
+//var candidates = {};
+//for (var names in votes){
+//candidates[names].president = 0;
+//}
+//console.log(candidates);
 
+for (var name in votes){
+  //console.log(votes[name]);
+  for(var position in votes[name]) {
+    //console.log(votes[name][vote]);
+    var newName = votes[name][position];
+    if (voteCount[position][newName] == undefined) {
+      voteCount[position][newName] = 1;
+    }
+    else {
+      voteCount[position][newName] += 1;
+    }
+  }
+}
 
-voteCount.president.Bob = 3;
-voteCount.vicePresident.Bob = 2;
-voteCount.secretary.Bob = 2;
-voteCount.treasurer.Bob = 4;
-
-
-
+//console.log(voteCount);
+for (var position in voteCount){
+  var marker = 0;
+  for(var person in voteCount[position]){
+    if (voteCount[position][person] > marker){
+      marker = voteCount[position][person];
+      officers[position] = person;
+    }
+  }
+}
+console.log(officers);
 
 // __________________________________________
 // Refactored Solution
