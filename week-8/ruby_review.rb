@@ -9,6 +9,8 @@
 
 # this first line here is defining a function called dr_evils_cipher which accepts an input
 # in the form of a coded message! 
+
+=begin
 def dr_evils_cipher(coded_message)
 # this next line set a variable to be equal to the input that is first splits each of the message and makes letter downcase character by character and turns it into an array 
   input = coded_message.downcase.split("") # Check out this method in IRB to see how it works! Also refer to the Ruby docs.
@@ -75,49 +77,37 @@ def dr_evils_cipher(coded_message)
   decoded_sentence = decoded_sentence.join("")
   #What is this method returning?
 end
-
+=end
 # Your Refactored Solution
 
 def dr_evils_cipher(coded_message)
-# this next line set a variable to be equal to the input that is first splits each of the message and makes letter downcase character by character and turns it into an array 
-  input = coded_message.downcase.split("") # Check out this method in IRB to see how it works! Also refer to the Ruby docs.
- # this line set a variable an empty array 
-  decoded_sentence = []
-  # this the key to decoding the message 
+input = coded_message.downcase.split("") 
+decoded_sentence = []
 
-# REFACTORED VERSION OF CIPHER
+alphabet = ('a'..'z').to_a
+cipher = Hash[alphabet.map.with_index.to_a]
+cipher.each { |k,v| cipher[k] = alphabet[v - 4] }
 
-array = ('a'..'z').to_a
-cipher = Hash[array.map.with_index.to_a]
-cipher.each { |k,v| cipher[k] = v - 4 }
-cipher.each { |k,v| cipher[k] = array[v] }
-
-# this method is push each individual character to go through a loop
-  input.each do |x| # What is #each doing here?
-# this is set as false first becaues nothing has happened yet 
-    found_match = false  # Why would this be assigned to false from the outset? What happens when it's true?
-# this method is running each character in the code and comparing it to the cipher 
-    cipher.each_key do |y| # What is #each_key doing here?
-# when  a match is found it is changed to the real letter and then ebing added to the array 
-      if x == y  # What is this comparing? Where is it getting x? Where is it getting y? What are those variables really?
-        decoded_sentence << cipher[y]
+  input.each do |code_character| 
+    found_match = false  
+    cipher.each_key do |letter|  
+      if code_character == letter
+        decoded_sentence << cipher[letter]
         found_match = true
-
- # it is break here because it is done and will stop looping
-        break  # Why is it breaking here?
-      elsif x == "@" || x == "#" || x == "$" || x == "%"|| x == "^" || x == "&"|| x =="*" #What the heck is this doing?
+        break  
+      elsif code_character == "@" || code_character == "#" || code_character == "$" || code_character == "%"|| code_character == "^" || code_character == "&"|| code_character =="*" 
         decoded_sentence << " "
         found_match = true
         break
 
-      elsif (0..9).to_a.include?(x) # Try this out in IRB. What does   " (0..9).to_a "    do?
-        decoded_sentence << x
+      elsif (0..9).to_a.include?(code_character) # Try this out in IRB. What does   " (0..9).to_a "    do?
+        decoded_sentence << code_character
         found_match = true
         break
       end
     end
     if not found_match  # What is this looking for?
-      decoded_sentence << x
+      decoded_sentence << code_character
     end
   end
   decoded_sentence = decoded_sentence.join("")
