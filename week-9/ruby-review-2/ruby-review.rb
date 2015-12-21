@@ -129,3 +129,11 @@ assert {
 assert { p smallest_integer([1,2,3]) == 3 } # Test to make sure assert method throws error when block evaluates to FALSE
 
 # 5. Reflection
+
+# What concepts did you review in this challenge?
+#In this challenged I reviewed the concept of "raise" and .shuffle method. 
+# What is still confusing to you about Ruby?
+#I'm a bit confused about how to create driver code and would liek to learn more about it.
+# What are you going to study to get more prepared for Phase 1?
+# I would like to review other students' work who have completed this challenge. 
+
